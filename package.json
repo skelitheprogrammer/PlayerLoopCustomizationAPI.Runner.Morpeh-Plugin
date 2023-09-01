@@ -2,7 +2,7 @@
   "name": "com.skillitronic.playerloopcustomizationapi.addons.runner.morpehplugin",
   "displayName": "PlayerLoopAPI Runner Morpeh plugin",
   "version": "0.0.1",
-  "description": "PlayerLoop customization API Runner Morpeh Plugin",
+  "description": "Morpeh Plugin for PlayerLoop customization API Runner",
   "keywords": [
     "unity",
     "unity3d",
@@ -27,7 +27,7 @@
   "resolutionStrategy": "highest",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/skelitheprogrammer/Morpeh-PlayerLoop-Runner-Plugin.git"
   }
 
 }
