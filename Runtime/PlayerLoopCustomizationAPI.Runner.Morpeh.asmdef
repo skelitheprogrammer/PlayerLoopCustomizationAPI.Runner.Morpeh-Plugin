@@ -1,0 +1,18 @@
+{
+    "name": "PlayerLoopCustomizationAPI.Runner.Morpeh",
+    "rootNamespace": "",
+    "references": [
+        "GUID:24d01c32b07a42f4da0ea1c0faeeec59",
+        "GUID:dfb370ca82bbb154b8d9fed5d206b4f8",
+        "GUID:3377deebfb0acde45876d12c6e3d27cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

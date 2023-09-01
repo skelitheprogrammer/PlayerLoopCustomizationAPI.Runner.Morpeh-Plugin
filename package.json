@@ -1,0 +1,33 @@
+{
+  "name": "com.skillitronic.playerloopcustomizationapi.addons.runner.morpehplugin",
+  "displayName": "PlayerLoopAPI Runner Morpeh plugin",
+  "version": "0.0.1",
+  "description": "PlayerLoop customization API Runner Morpeh Plugin",
+  "keywords": [
+    "unity",
+    "unity3d",
+    "playerloop",
+    "playerloopapi",
+    "plugin",
+    "morpeh",
+    "runner",
+    "customization",
+    "api"
+  ],
+  "author": {
+    "name": "Dosyn Kirill",
+    "email": "dosynkirill@gmail.com",
+    "url": "https://github.com/skelitheprogrammer"
+  },
+  "dependencies": {
+    "com.skillitronic.playerloopcustomizationapi": "0.2.0",
+    "com.skillitronic.playerloopcustomizationapi.addons.runner": "0.1.0"
+  },
+  "enableLockFile": true,
+  "resolutionStrategy": "highest",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+
+}
