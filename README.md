@@ -12,6 +12,8 @@ Plugin for <a href="https://github.com/scellecs/morpeh/tree/stage-2023.1">Morpeh
 
 # Installation
 
+## Add [Morpeh (stage2023-1)](https://github.com/scellecs/morpeh/tree/stage-2023.1#-how-to-install) to the project
+
 ## Add scoped registry to manifest.json
 ```
 "scopedRegistries": [
@@ -21,7 +23,6 @@ Plugin for <a href="https://github.com/scellecs/morpeh/tree/stage-2023.1">Morpeh
   "scopes": [
     "com.skillitronic.playerloopcustomizationapi",
     "com.skillitronic.playerloopcustomizationapi.addons.runner",
-    "com.scellecs.morpeh"
   ]
 }
 ],
