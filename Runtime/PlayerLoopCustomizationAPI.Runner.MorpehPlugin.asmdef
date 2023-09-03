@@ -1,5 +1,5 @@
 {
-    "name": "PlayerLoopCustomizationAPI.Runner.Morpeh",
+    "name": "PlayerLoopCustomizationAPI.Runner.MorpehPlugin",
     "rootNamespace": "",
     "references": [
         "GUID:24d01c32b07a42f4da0ea1c0faeeec59",

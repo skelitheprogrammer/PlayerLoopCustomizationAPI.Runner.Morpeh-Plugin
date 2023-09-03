@@ -4,64 +4,29 @@ using Scellecs.Morpeh;
 
 namespace PlayerLoopCustomizationAPI.Addons.Runner.MorpehPlugin
 {
-    internal class WorldDispatcher : IDisposable
+    internal static class WorldDispatcher
     {
-        private World _world;
-        private IDisposable[] _disposables;
-
-        private bool _disposed;
-        
-        public WorldDispatcher(World world)
+        internal static IDisposable[] Dispatch(World world)
         {
-            _world = world;
-        }
-
-        public void Dispatch()
-        {
-            if (_disposed)
-            {
-                return;
-            }
-            
-            WorldFixedUpdateLoopItem worldFixedUpdateLoopItem = new(_world);
+            WorldFixedUpdateLoopItem worldFixedUpdateLoopItem = new(world);
             Registrar.Dispatch(0, worldFixedUpdateLoopItem);
 
-            WorldUpdateLoopItem worldUpdateLoopItem = new(_world);
+            WorldUpdateLoopItem worldUpdateLoopItem = new(world);
             Registrar.Dispatch(1, worldUpdateLoopItem);
 
-            WorldLateUpdateLoopItem worldLateUpdateLoopItem = new(_world);
+            WorldLateUpdateLoopItem worldLateUpdateLoopItem = new(world);
             Registrar.Dispatch(2, worldLateUpdateLoopItem);
-            
-            WorldCleanupUpdateLoopItem worldCleanupUpdateLoopItem = new(_world);
+
+            WorldCleanupUpdateLoopItem worldCleanupUpdateLoopItem = new(world);
             Registrar.Dispatch(3, worldCleanupUpdateLoopItem);
 
-            _disposables = new IDisposable[]
+            return new IDisposable[]
             {
                 worldFixedUpdateLoopItem,
                 worldUpdateLoopItem,
                 worldLateUpdateLoopItem,
                 worldCleanupUpdateLoopItem
             };
-        }
-
-        public void Dispose()
-        {
-            if (_disposed)
-            {
-                return;
-            }
-            
-            foreach (IDisposable disposable in _disposables)
-            {
-                disposable.Dispose();
-            }
-
-            _disposables = null;
-            
-            _world = null;
-            
-            _disposed = true;
-            GC.SuppressFinalize(this);
         }
     }
 }

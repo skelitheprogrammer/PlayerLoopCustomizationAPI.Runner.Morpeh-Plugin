@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace PlayerLoopCustomizationAPI.Addons.Runner.MorpehPlugin.LoopItems
 {
-    internal class WorldUpdateLoopItem : WorldRepeatableLoopItem
+    internal sealed class WorldUpdateLoopItem : WorldRepeatableLoopItem
     {
-        public WorldUpdateLoopItem(World world) : base(world)
+        internal WorldUpdateLoopItem(World world) : base(world)
         {
         }
 
