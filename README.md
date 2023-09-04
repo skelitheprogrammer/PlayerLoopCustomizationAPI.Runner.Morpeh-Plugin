@@ -6,7 +6,7 @@ Plugin for <a href="https://github.com/scellecs/morpeh/tree/stage-2023.1">Morpeh
 
 # Features
 - Fully automatic integration With Morpeh.
-- Create your game, let [PlayerCustomizationLoopAPI](https://github.com/skelitheprogrammer/PlayerLoopCustomizationAPI). update systems for you
+- Create your game, let [PlayerCustomizationLoopAPI](https://github.com/skelitheprogrammer/PlayerLoopCustomizationAPI) update systems for you
 > [!WARNING]
 > Plugin depends on [stage-2023.1](https://github.com/scellecs/morpeh/tree/stage-2023.1) version due opened dispose check extension in that version.
 
@@ -33,7 +33,7 @@ Plugin for <a href="https://github.com/scellecs/morpeh/tree/stage-2023.1">Morpeh
 "com.skillitronic.playerloopcustomizationapi.addons.runner.morpehplugin": "https://github.com/skelitheprogrammer/PlayerLoopCustomizationAPI.Runner.Morpeh-Plugin.git"
 ```
 
-### Add [Define symbol](https://github.com/skelitheprogrammer/PlayerLoop-customization-API-Runner-Addon#ready-solution)
+### Add [Define symbol](https://docs.unity3d.com/Manual/CustomScriptingSymbols.html)
 ```
 MORPEH_DISABLE_AUTOINITIALIZATION
 ```
