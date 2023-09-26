@@ -7,11 +7,12 @@ namespace PlayerLoopCustomizationAPI.Addons.Runner.MorpehPlugin
 {
     internal sealed class DispatcherWorldPlugin : IWorldPlugin
     {
-        private static readonly Dictionary<World, IDisposable[]> _disposables = new();
+        private static Dictionary<World, IDisposable[]> _disposables;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void RuntimeInitialize()
         {
+            _disposables = new();
             WorldExtensions.AddWorldPlugin(new DispatcherWorldPlugin());
         }
 
@@ -21,7 +22,7 @@ namespace PlayerLoopCustomizationAPI.Addons.Runner.MorpehPlugin
             {
                 throw new NullReferenceException();
             }
-            
+
             IDisposable[] disposables = WorldDispatcher.Dispatch(world);
             _disposables.Add(world, disposables);
         }
@@ -34,6 +35,8 @@ namespace PlayerLoopCustomizationAPI.Addons.Runner.MorpehPlugin
                 {
                     disposable.Dispose();
                 }
+
+                _disposables.Remove(world);
             }
         }
     }
